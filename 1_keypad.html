@@ -1,0 +1,32 @@
+<html>
+<script>
+    function msg2(){
+
+        if(event.keyCode==39){
+            S.style.left=parseInt(S.style.left)+10
+        }
+        if(event.keyCode==40){
+            S.style.top=parseInt(S.style.top)+10
+        }
+        if(event.keyCode==37){
+
+            if(parseInt(S.style.left)<=20){
+                S.style.left=1500
+                console.log("Reached")
+            }else{
+                S.style.left=parseInt(S.style.left)-10
+            }
+            
+        }
+        if(event.keyCode==38){
+            S.style.left=parseInt(S.style.left)-10
+        }
+
+    }
+</script> 
+
+<body onkeydown="msg2()"></body>
+<span id="S" style="position:absolute;left:0;top:0;">
+<img src="index.png" width="20%" height="10%"> </img> 
+</span>
+</html>

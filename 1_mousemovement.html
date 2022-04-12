@@ -1,0 +1,20 @@
+<html>
+    <script>
+        function doSomething(){
+            t.value= parseInt(t.value) + 1
+        }
+        function enter(){
+            alert("I am entering")
+        }
+        function leave(){
+            alert("I am leaving")
+        }
+    </script>
+    <input type="text" id="t" value="0">
+    <input
+        type="button"
+        value="Manchester"
+        onmousemove="doSomething()"
+        onmouseenter="enter()"
+        onmouseleave="leave()">
+</html>

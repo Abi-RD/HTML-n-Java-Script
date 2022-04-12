@@ -1,0 +1,16 @@
+<html>
+<script>
+    function msg(){
+        console.log(event.clientX+"...."+event.clientY)
+        spn1.style.top=event.clientX;
+        spn1.style.down=event.clientY;
+    }
+</script>
+
+<body   onmousemove="msg()"></body>
+<span   id="spn1"
+        style="color: black;position:absolute">
+        Kent
+    
+        </span>
+</html>

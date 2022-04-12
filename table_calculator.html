@@ -1,0 +1,78 @@
+<html>
+
+<script>
+
+    let first=0
+    let sign=""
+
+    function operations(s){
+        first=myScreen.value
+        sign=s
+        myScreen.value=""
+    }
+    function clearScreen(){
+        myScreen.value=""
+    }
+    function digit(d) {
+        myScreen.value = myScreen.value + d 
+    }
+
+    function showresults(){
+        if (sign=="+"){
+            myScreen.value= parseInt(first) + parseInt(myScreen.value)
+        }
+
+        if (sign=="-"){
+            myScreen.value= parseInt(first) - parseInt(myScreen.value)
+        }
+
+        if (sign=="/"){
+            myScreen.value= parseInt(first) / parseInt(myScreen.value)
+        }
+
+        if (sign=="x"){
+            myScreen.value= parseInt(first) * parseInt(myScreen.value)
+        }
+    }
+</script>
+
+<table>
+    <tr>
+        <td colspan="4"> <input type="text" id="myScreen"> </td>
+    </tr>
+
+    <tr> 
+        <td> <input type="button" value="0" onclick="digit(0)"> </td>
+        <td> <input type="button" value="1" onclick="digit(1)"> </td>
+        <td> <input type="button" value="2" onclick="digit(2)"> </td>
+        <td> <input type="button" value="+" onclick="operations('+')"> </td>
+
+    </tr>
+
+    <tr> 
+        <td> <input type="button" value="3" onclick="digit(3)"> </td>
+        <td> <input type="button" value="4" onclick="digit(4)"> </td>
+        <td> <input type="button" value="5" onclick="digit(5)"> </td>
+        <td> <input type="button" value="-" onclick="operations('_')"> </td>
+
+    </tr>
+
+    <tr> 
+        <td> <input type="button" value="6" onclick="digit(6)"> </td>
+        <td> <input type="button" value="7" onclick="digit(7)"> </td>
+        <td> <input type="button" value="8" onclick="digit(8)"> </td>
+        <td> <input type="button" value="x" onclick="operations('x')"> </td>
+
+    </tr>
+
+    <tr> 
+        <td> <input type="button" value="9" onclick="digit(9)"> </td>
+        <td> <input type="button" value="C" onclick="clearScreen()"> </td>
+        <td> <input type="button" value="=" onclick="showresults()"> </td>
+        <td> <input type="button" value="/" onclick="operations('/')"> </td>
+
+    </tr>
+
+</table>
+
+</html>
